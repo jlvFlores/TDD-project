@@ -4,9 +4,14 @@ describe Solver do
   before :each do
     @solver = Solver.new
   end
+
   context 'test methods when receiving valid values' do
     it 'factorial method return the factorial of the given interger' do
       expect(@solver.factorial(5)).to eq(120)
+    end
+
+    it 'reverse method returns a given string backwards' do
+      expect(@solver.reverse('hello')).to eq('olleh')
     end
   end
 
@@ -15,5 +20,4 @@ describe Solver do
       expect{@solver.factorial(-1)}.to raise_exception(SystemStackError)
     end
   end
-
 end
