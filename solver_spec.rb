@@ -33,7 +33,7 @@ describe Solver do
 
   context 'test methods when receiving invalid values' do
     it 'factorial method throws SystemStackError when given a negative number' do
-      expect{@solver.factorial(-1)}.to raise_exception(SystemStackError)
+      expect { @solver.factorial(-1) }.to raise_exception(SystemStackError)
     end
   end
 end
